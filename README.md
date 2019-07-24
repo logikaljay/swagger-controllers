@@ -2,6 +2,16 @@
 
 Convert opinionated typescript ES6 classes to swagger documentation.
 
+The bulk of this work is taken from [tsoa](https://github.com/lukeautry/tsoa). A big thanks to all of the contributors to that project.
+
+## Why not just use tsoa?
+
+The only reason is running a command to generate routes from these classes never sat well with me mostly due to the fact that if you wanted to debug your routes.
+
+## Is this a replacement for tsoa?
+
+No. Not at all. All this library does is use typescript to generate a swagger.json file from classes that have been defined. It is up to you to convert these classes to routes somehow.
+
 ## Example
 
 ```typescript
