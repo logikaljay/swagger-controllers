@@ -13,8 +13,8 @@
     "build": "tsc --build tsconfig.json src/",
     "test": "jest"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jay Baker",
+  "license": "MIT",
   "dependencies": {
     "lodash.indexof": "^4.0.5",
     "lodash.map": "^4.6.0",
