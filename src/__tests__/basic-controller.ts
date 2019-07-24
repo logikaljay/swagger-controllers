@@ -18,7 +18,7 @@ describe("Generate", () => {
 
   afterAll(() => {
     // clean up
-    unlinkSync("./swagger.json")
+    // unlinkSync("./swagger.json")
   })
 
   it("should generate a swagger.json file for our controller", () => {

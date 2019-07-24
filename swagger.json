@@ -1,0 +1,59 @@
+{
+	"basePath": "/",
+	"consumes": [
+		"application/json"
+	],
+	"definitions": {},
+	"info": {
+		"title": ""
+	},
+	"paths": {
+		"/api/basic/GetTest": {
+			"get": {
+				"operationId": "GetTest",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "string"
+						}
+					}
+				},
+				"tags": [
+					"Basic"
+				],
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/api/basic/CreateOrUpdateTest": {
+			"post": {
+				"operationId": "CreateOrUpdateTest",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "string"
+						}
+					}
+				},
+				"tags": [
+					"Basic"
+				],
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"produces": [
+		"application/json"
+	],
+	"swagger": "2.0",
+	"securityDefinitions": {}
+}

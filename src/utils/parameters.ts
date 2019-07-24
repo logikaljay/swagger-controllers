@@ -70,14 +70,22 @@ export function Header(name?: string): Function {
   }
 }
 
+
 /**
  * Define a controller to process
  * 
  * @param {string} [route] The name of the controller in the url
  */
-export function Controller(route: string): Function {
-  return (target: any) => {
-    target.basePath = route
-    return
+let Controller = null;
+try {
+  Controller = require("bpc").Controller
+}
+catch (e) {
+  Controller = (route: string): Function => {
+    return (target: any) => {
+      target.basePath = route
+      return
+    }
   }
 }
+export { Controller }
