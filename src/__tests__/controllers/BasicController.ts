@@ -1,7 +1,7 @@
 import { Controller } from "../../"
 
 @Controller("/api/basic")
-export class BasicController {
+export default class BasicController {
   public async GetTest(): Promise<string> {
     return "";
   }

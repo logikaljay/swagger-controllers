@@ -17,7 +17,7 @@ interface IDtoOutputParams {
 }
 
 @Controller("/api/advanced")
-export class AdvancedController {
+export default class AdvancedController {
   public async CreateOrUpdateTest(@Body() input: IDtoInputParams): Promise<IDtoOutputParams> {
     const result: IDtoOutputParams = {
       success: true,

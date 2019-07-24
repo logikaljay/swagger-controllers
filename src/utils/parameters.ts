@@ -76,7 +76,8 @@ export function Header(name?: string): Function {
  * @param {string} [route] The name of the controller in the url
  */
 export function Controller(route: string): Function {
-  return () => {
+  return (target: any) => {
+    target.basePath = route
     return
   }
 }

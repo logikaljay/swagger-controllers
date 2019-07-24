@@ -20,7 +20,7 @@ interface IDtoOutput {
 }
 
 @Controller("/api/example1")
-export class Example1Controller {
+export default class Example1Controller {
   public async CreateOrUpdateTest(input: IDtoInput): Promise<IDtoOutput> {
     return {
       success: true,
