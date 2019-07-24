@@ -1,0 +1,31 @@
+{
+  "name": "swagger-controllers",
+  "version": "0.0.6",
+  "description": "Generate swagger.json file from opinionated controllers",
+  "keywords": [
+    "tsoa",
+    "swagger",
+    "typescript"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublishOnly": "tsc",
+    "build": "tsc --build tsconfig.json src/",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.indexof": "^4.0.5",
+    "lodash.map": "^4.6.0",
+    "moment": "^2.24.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.8",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  }
+}
