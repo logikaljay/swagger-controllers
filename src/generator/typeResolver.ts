@@ -80,16 +80,7 @@ export class TypeResolver {
     }
 
     if (this.typeNode.kind === ts.SyntaxKind.ThisType) {
-      let parent = this.parentNode.parent
-
-      // @ts-ignore
-      if (parent.nextContainer) {
-        // @ts-ignore
-        parent = parent.nextContainer
-      }
-
-      // @ts-ignore
-      return { dataType: 'refObject', refName: parent.name.text }
+      return { dataType: 'any' } as Tsoa.Type
     }
 
     if (this.typeNode.kind === ts.SyntaxKind.TypeLiteral) {
