@@ -21,7 +21,7 @@ describe("ThisTypeController", () => {
 
   afterAll(() => {
     // remove our swagger.json file after
-    // unlinkSync("./swagger.json")
+    unlinkSync("./swagger.json")
   })
 
   it("should map this type to itself", () => {
