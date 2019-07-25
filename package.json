@@ -1,6 +1,6 @@
 {
   "name": "swagger-controllers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate swagger.json file from opinionated controllers",
   "keywords": [
     "tsoa",
