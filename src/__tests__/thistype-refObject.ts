@@ -27,5 +27,6 @@ describe("ThisTypeController", () => {
   it("should map this type to itself", () => {
     expect(obj).toBeDefined()
     expect(obj.definitions).not.toHaveProperty("undefined");
+    expect(obj.definitions.User.properties["lastUpdatedUser"]['$ref']).toBe("#/definitions/User")
   })
 });

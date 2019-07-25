@@ -83,7 +83,7 @@ export class TypeResolver {
       const parent = this.parentNode.parent as ts.Identifier
 
       // @ts-ignore
-      return { dataType: 'refObject', refName: parent.name.text }
+      return { dataType: 'refObject', refName: parent.nextContainer.name.text }
     }
 
     if (this.typeNode.kind === ts.SyntaxKind.TypeLiteral) {

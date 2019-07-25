@@ -1,10 +1,12 @@
 import { Controller } from "../../";
 
-class User {
+interface IUser {
+  lastUpdatedUser?: this
+}
+
+interface User extends IUser {
   name: string
   age: string
-
-  lastUpdatedUser?: this
 }
 
 
