@@ -337,7 +337,7 @@ export class SpecGenerator {
       // fix: types with nested objects were not supported.
       if (swaggerType.type === "object") {
         // @ts-ignore
-        properties[property.name].properties = this.buildProperties(property.type.properties)
+        properties[property.name].properties = this.buildProperties(property.type.properties || [])
       }
     })
 
