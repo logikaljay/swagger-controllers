@@ -102,6 +102,8 @@ export namespace Tsoa {
       | 'any'
       | 'refEnum'
       | 'refObject'
+      | 'this'
+    refName?: string
   }
 
   export interface EnumerateType extends Type {

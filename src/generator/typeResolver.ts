@@ -31,7 +31,7 @@ export class TypeResolver {
     private readonly typeNode: ts.TypeNode,
     private readonly current: MetadataGenerator,
     private readonly parentNode?: ts.Node,
-    private readonly extractEnum = true
+    private readonly extractEnum = true,
   ) {}
 
   public resolve(): Tsoa.Type {
@@ -77,6 +77,13 @@ export class TypeResolver {
 
     if (this.typeNode.kind === ts.SyntaxKind.AnyKeyword) {
       return { dataType: 'any' } as Tsoa.Type
+    }
+
+    if (this.typeNode.kind === ts.SyntaxKind.ThisType) {
+      const parent = this.parentNode.parent as ts.Identifier
+
+      // @ts-ignore
+      return { dataType: 'refObject', refName: parent.name.text }
     }
 
     if (this.typeNode.kind === ts.SyntaxKind.TypeLiteral) {
@@ -577,9 +584,10 @@ export class TypeResolver {
     }) as UsableDeclaration[]
 
     if (!modelTypes.length) {
-      throw new GenerateMetadataError(
-        `No matching model found for referenced type ${typeName}.`
-      )
+      // throw new GenerateMetadataError(
+      //   `No matching model found for referenced type ${typeName}.`
+      // )
+      return null
     }
 
     if (modelTypes.length > 1) {

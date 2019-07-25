@@ -11,7 +11,7 @@
       "program": "${workspaceFolder}/node_modules/.bin/jest",
       "args": [
         "--runInBand",
-        // "src/__tests__/undefined-definition.ts"
+        // "src/__tests__/thistype-refObject.ts"
       ],
       "console": "integratedTerminal",
       "disableOptimisticBPs": true
